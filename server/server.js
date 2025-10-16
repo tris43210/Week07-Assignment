@@ -8,6 +8,11 @@ app.use(express.json());
 app.use(cors());
 dotenv.config(); 
 
+const db = new pg.Pool({
+  connectionString: process.env.DB_CONN_STRING,
+}); 
+
+
 app.get(`/`, async function (req, res) {
   res.json({ message: "this is the root route" });
 });

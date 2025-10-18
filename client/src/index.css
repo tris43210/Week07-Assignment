@@ -7,13 +7,45 @@
   font-family: sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: bold
+}
+
+button { 
+  background-color: rgb(14, 14, 14);
+  border-radius: 4px;
+  font-weight: bold; 
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: transform 1s ease;
+}
+
+button:hover {
+  transform: scale(1.10);
+}
+
 body {
   background-color: rgb(24, 24, 24);
   color: white;
-  display: grid;
+}
+
+#root {
+  height: 100vh;
 }
 
 img {
   border-radius: 10px;
   border: 5px solid rgba(0, 0, 0, 0.342);
+  margin: 2%;
+  transition: transform 1s ease;
 }
+
+img:hover {
+  transform: scale(1.03);
+}
+
+.image-container {
+  width: 100vw;
+}
+

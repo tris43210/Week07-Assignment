@@ -23,9 +23,9 @@ export function AlbumsPage() {
       <Header />
       <main>
         <div className="album-container">
-          <h1>My Favorite Albums:</h1>
+          <h1 className="text-center">My Favorite Albums</h1>
         </div>
-        <div>
+        <div className="flex justify-around">
           <button
             onClick={function () {
               setVisible(true);
@@ -49,11 +49,11 @@ export function AlbumsPage() {
               return (
                 <div
                   key={album.id}
-                  className="w-screen flex flex-col items-center"
+                  className="w-screen flex flex-col items-center image-container"
                 >
                   <Link to={`/albums/${album.id}`}>
                     <img src={album.albumCover} />
-                    <h1>{album.albumName}</h1>
+                    <h1 className="text-center">{album.albumName}</h1>
                   </Link>
                 </div>
               );

@@ -1,3 +1,34 @@
+
+.review-container {
+  background-color: rgb(12, 12, 12);
+  border-radius: 10px;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  display: grid;
+  font-size: 1.1rem;
+}
+
+.review-container > p {
+  margin: 2px;
+}
+
+.form-container {
+  background-color: rgb(12, 12, 12);
+  margin: 20px;
+  border-radius: 10px;
+  
+}
+
 .review-form {
-  border: 1px solid black;
+  display: flex; 
+  justify-content: center;
+}
+
+input {
+  background-color: rgb(93, 93, 93);
+  width: 100%;
+  margin-left: 10%;  
+  margin-right: 10%;  
 }

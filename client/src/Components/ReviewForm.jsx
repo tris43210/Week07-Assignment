@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 export function ReviewForm() {
   const { id } = useParams();
   const [formValues, setFormValues] = useState({});
-  const [reviews, setReviews] = useState({})
+  const [reviews, setReviews] = useState([])
 
   function handleChange(event) {
     const name = event.target.name;
@@ -32,6 +32,8 @@ useEffect(function () {
     setReviews(data);
   }
 
+  getReviews();
+  
   const pollingReviews = setInterval(function () {
     getReviews();
   }, 5000);
@@ -45,12 +47,17 @@ useEffect(function () {
 
   return (
     <>
-      <div>
-
+      <div className="review-container">
+        {reviews.map(function(item) {
+          return(
+              <p>{item.review}</p>
+          )
+        })}
       </div>
-      <div>
+      <div className="form-container">
+
         <form className="review-form" onSubmit={handleSubmit}>
-          <label htmlFor="userReview">Leave a Review: </label>
+          <label htmlFor="userReview" className="font-bold">Leave a Review: </label>
           <input
             type="text"
             onChange={handleChange}
@@ -58,6 +65,7 @@ useEffect(function () {
             id="userReview"
             placeholder="Leave a Review"
             value={formValues.review || ""}
+            required
           />
           <button type="submit">Submit</button>
         </form>

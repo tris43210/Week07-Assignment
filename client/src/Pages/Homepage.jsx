@@ -5,6 +5,9 @@ export function HomePage() {
   return (
     <>
       <Header />
+      <main>
+        <p className="text-8xl">Can't think what to put here</p>
+      </main>
       <Footer />
     </>
   );

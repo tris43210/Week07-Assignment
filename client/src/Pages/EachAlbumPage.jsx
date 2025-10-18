@@ -27,9 +27,12 @@ export function EachAlbumPage() {
     <>
       <Header />
       <main>
-        <div className="w-screen flex flex-col items-center image-container">
+        <div className="w-screen flex flex-col items-center">
           <img src={individualAlbums[0]?.albumCover} />
           <h1>{individualAlbums[0]?.albumName}</h1>
+          <button>
+            Preview
+          </button>
         </div>
         <ReviewForm />
       </main>

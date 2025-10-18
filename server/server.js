@@ -36,6 +36,10 @@ app.post(`/reviews`, async function(req,res) {
   res.json({message: `Your review has been submitted`})
 })
 
+app.get(`/reviews`, async function(req,res) {
+  const dbReviews = await db.query(`SELECT * FROM albumreviews WHERE albumid = $1`, [req.query.albumid]);
+  res.json(dbReviews.rows)
+})
 
 app.listen(8081, function () {
   console.log(`server running on port: http://localhost:8081`);

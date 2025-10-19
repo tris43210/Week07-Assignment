@@ -2,6 +2,7 @@ import { Header } from "../Components/Header";
 import { Footer } from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router";
+import "./AlbumsPage.css"
 
 export function AlbumsPage() {
   const [albums, setAlbums] = useState([]);
@@ -26,7 +27,7 @@ export function AlbumsPage() {
           <h1 className="text-center">My Favorite Albums</h1>
         </div>
         <div className="flex justify-around">
-          <button
+          <button className="btn-displayAlbums show"
             onClick={function () {
               setVisible(true);
             }}
@@ -34,7 +35,7 @@ export function AlbumsPage() {
             {" "}
             See Albums
           </button>
-          <button
+          <button className="btn-displayAlbums hide"
             onClick={function () {
               setVisible(false);
             }}

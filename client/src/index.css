@@ -37,8 +37,11 @@ body {
 img {
   border-radius: 10px;
   border: 5px solid rgba(0, 0, 0, 0.342);
-  margin: 2%;
   transition: transform 1s ease;
+  /* padding: 20px; */
+  margin-bottom: 20px;
+  margin-top: 20px
+
 }
 
 img:hover {

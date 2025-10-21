@@ -10,7 +10,7 @@ export function AlbumsPage() {
 
   useEffect(function () {
     async function fetchImages() {
-      const getData = await fetch(`http://localhost:8081/albums`);
+      const getData = await fetch(`https://week07-assignment-server-afhz.onrender.com/albums`);
       const gotData = await getData.json();
       setAlbums(gotData);
     }

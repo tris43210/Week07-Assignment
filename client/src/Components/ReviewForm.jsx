@@ -16,7 +16,7 @@ export function ReviewForm() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    await fetch("http://localhost:8081/reviews", {
+    await fetch("https://week07-assignment-server-afhz.onrender.com/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ review: formValues.review, albumid: Number(id) }),
@@ -27,7 +27,7 @@ export function ReviewForm() {
 
 useEffect(function () {
   async function getReviews() {
-    const response = await fetch(`http://localhost:8081/reviews?albumid=${id}`);
+    const response = await fetch(`https://week07-assignment-server-afhz.onrender.com/reviews?albumid=${id}`);
     const data = await response.json();
     setReviews(data);
   }

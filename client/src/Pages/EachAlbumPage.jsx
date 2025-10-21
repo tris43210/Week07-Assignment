@@ -12,7 +12,7 @@ export function EachAlbumPage() {
     function () {
       async function fetchData() {
         const getData = await fetch(
-          `http://localhost:8081/albums/${params.id}`
+          `https://week07-assignment-server-afhz.onrender.com/albums/${params.id}`
         );
         const gotData = await getData.json();
         console.log(gotData);

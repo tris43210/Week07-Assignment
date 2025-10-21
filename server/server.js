@@ -42,5 +42,5 @@ app.get(`/reviews`, async function(req,res) {
 })
 
 app.listen(8081, function () {
-  console.log(`server running on port: http://localhost:8081`);
+  console.log(`server running on port: https://week07-assignment-server-afhz.onrender.com/`);
 });
